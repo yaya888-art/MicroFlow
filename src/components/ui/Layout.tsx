@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { Github, Search } from 'lucide-react';
 import { cn } from './Base';
