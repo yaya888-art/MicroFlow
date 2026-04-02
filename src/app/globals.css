@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 29, 29, 31;
+  --background-rgb: 255, 255, 255;
+  --apple-blue: #007AFF;
+  --apple-gray: #F5F5F7;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  
+  .apple-card {
+    @apply bg-white rounded-apple border border-[#D2D2D7]/30 shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+  
+  .apple-button {
+    @apply px-6 py-3 rounded-full bg-[#007AFF] text-white font-medium hover:bg-[#0071e3] transition-colors active:scale-95 duration-200;
+  }
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(0, 122, 255, 0.2);
+  color: #007AFF;
+}
+
+/* Stagger animation class */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
