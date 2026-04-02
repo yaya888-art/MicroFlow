@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import React, { useState } from 'react';
 import { Header, Footer } from '@/components/ui/Layout';
 import { AnimationGrid } from '@/components/animation/Grid';
